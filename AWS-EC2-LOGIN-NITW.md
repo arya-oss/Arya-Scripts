@@ -34,6 +34,7 @@ we currently modified.
 ### Login from our College Network (On your local system)
 We will use SSH through HTTP proxies. For this we are going to use [Corkscrew](http://agroman.net/corkscrew/)
 Corkscrew is a tool for tunneling SSH through HTTP proxies.
+
 1. Download Corkscrew [corkscrew-2.0.tar.gz](http://agroman.net/corkscrew/corkscrew-2.0.tar.gz)
 ```bash
 cd Downloads
@@ -43,7 +44,7 @@ cd corkscrew-2.0
 make
 sudo make install
 ```
-2. Edit `~/.ssh/config/` file add `ProxyCommand corkscrew 172.30.0.7 3128 %h %p`
+2. Edit `~/.ssh/config` file and add `ProxyCommand corkscrew 172.30.0.7 3128 %h %p`
 3. Now login into EC2 Instance `ssh -i /path/to/aws_key.pem -p 443 ubuntu@YOUR-PUBLIC-IP`
 
 ### Contact
